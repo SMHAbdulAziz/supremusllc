@@ -19,9 +19,9 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src="https://i.ibb.co/6RTPXN1/image.png" 
-              alt="Supremus Logo" 
+            <img
+              src="/logo.jpg"
+              alt="Supremus Logo"
               className="h-10 w-10 object-contain brightness-110"
             />
             <span className="text-xl font-heading tracking-wider gold-gradient">Supremus, LLC</span>
@@ -34,9 +34,8 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`nav-link text-sm uppercase tracking-widest ${
-                    location.pathname === item.path ? 'text-[#D4AF37]' : 'text-gray-300 hover:text-white'
-                  }`}
+                  className={`nav-link text-sm uppercase tracking-widest ${location.pathname === item.path ? 'text-[#D4AF37]' : 'text-gray-300 hover:text-white'
+                    }`}
                 >
                   {item.name}
                 </Link>

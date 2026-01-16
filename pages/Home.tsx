@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div className="relative">
       <div className="ambient-glow -top-20 -left-20"></div>
-      
+
       {/* Hero Section */}
       <section className="min-h-[85vh] flex items-center pt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -32,17 +32,17 @@ const Home: React.FC = () => {
                 www.supremusllc.biz
               </p>
             </div>
-            
+
             <div className="order-1 lg:order-2 flex justify-center relative">
               <div className="ambient-glow top-0 right-0"></div>
               <div className="relative w-full max-w-md">
                 <div className="absolute -top-10 -right-10 w-32 h-32 border-t-2 border-r-2 border-[#D4AF37]/30"></div>
                 <div className="absolute -bottom-10 -left-10 w-32 h-32 border-b-2 border-l-2 border-[#D4AF37]/30"></div>
-                
+
                 <div className="p-4 bg-[#1C1C1C] border border-white/5 shadow-2xl">
-                   <img 
-                    src="https://i.ibb.co/6RTPXN1/image.png" 
-                    alt="Supremus Lion" 
+                  <img
+                    src="/logo.jpg"
+                    alt="Supremus Lion"
                     className="w-full h-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.2)] transition-all hover:brightness-110"
                   />
                 </div>
@@ -66,19 +66,19 @@ const Home: React.FC = () => {
       <section className="py-24 bg-[#141414]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ServiceCard 
-              icon="fas fa-robot" 
-              title="AI Receptionists" 
+            <ServiceCard
+              icon="fas fa-robot"
+              title="AI Receptionists"
               desc="Deploy custom AI agents that handle inquiries, book appointments, and capture leads 24/7."
             />
-            <ServiceCard 
-              icon="fas fa-code" 
-              title="Website Building" 
+            <ServiceCard
+              icon="fas fa-code"
+              title="Website Building"
               desc="Next-generation, high-performance websites built to convert visitors into loyal clients."
             />
-            <ServiceCard 
-              icon="fas fa-building" 
-              title="Business Formation" 
+            <ServiceCard
+              icon="fas fa-building"
+              title="Business Formation"
               desc="Professional formation of LLCs, Trusts, and Corporations with strategic asset protection."
             />
           </div>
