@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.jpg';
 
 const Home: React.FC = () => {
   return (
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
 
                 <div className="p-4 bg-[#1C1C1C] border border-white/5 shadow-2xl">
                   <img
-                    src="/logo.jpg"
+                    src={logo}
                     alt="Supremus Lion"
                     className="w-full h-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.2)] transition-all hover:brightness-110"
                   />

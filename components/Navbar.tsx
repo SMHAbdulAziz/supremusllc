@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.jpg';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="/logo.jpg"
+              src={logo}
               alt="Supremus Logo"
               className="h-10 w-10 object-contain brightness-110"
             />
