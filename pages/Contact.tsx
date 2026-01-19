@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
               <ContactInfoItem
                 icon="fas fa-map-marker-alt"
                 title="Address"
-                content="325 N Saint Paul St, Suite 3100, Dallas, TX 75201"
+                content="1402 Corinth St, Room 2300, Dallas, TX 75215"
               />
               <ContactInfoItem
                 icon="fas fa-phone-alt"
