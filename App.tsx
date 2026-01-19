@@ -6,6 +6,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
+import MLKPromo from './pages/MLKPromo';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -20,7 +21,7 @@ const App: React.FC = () => {
       </svg>
 
       <Navbar />
-      
+
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/mlk-sale" element={<MLKPromo />} />
         </Routes>
       </main>
 
