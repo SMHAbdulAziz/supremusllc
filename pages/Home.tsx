@@ -1,10 +1,91 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
 const Home: React.FC = () => {
+  const [showPromo, setShowPromo] = useState(false);
+
+  useEffect(() => {
+    // Show promo after 1 second delay
+    const timer = setTimeout(() => {
+      setShowPromo(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="relative">
+      {/* Promotional Overlay */}
+      {showPromo && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn">
+          <div className="relative max-w-2xl mx-4 bg-gradient-to-br from-[#1C1C1C] to-[#0A0A0A] border-4 border-[#D4AF37] rounded-lg shadow-2xl shadow-[#D4AF37]/50 animate-scaleIn">
+            {/* Close Button */}
+            <button
+              onClick={() => setShowPromo(false)}
+              className="absolute -top-4 -right-4 w-10 h-10 bg-[#D4AF37] text-black rounded-full font-bold text-xl hover:bg-[#B8941F] transition-all shadow-lg z-10"
+            >
+              ×
+            </button>
+
+            {/* Flashing Border Effect */}
+            <div className="absolute inset-0 rounded-lg border-4 border-[#D4AF37] animate-pulse pointer-events-none"></div>
+
+            <div className="p-8 md:p-12 text-center">
+              {/* Icon */}
+              <div className="text-6xl mb-4 animate-bounce">✊🏽</div>
+
+              {/* Headline */}
+              <h2 className="text-3xl md:text-4xl font-heading gold-gradient mb-4 uppercase tracking-wider">
+                MLK Day Special!
+              </h2>
+
+              {/* Offer */}
+              <div className="mb-6">
+                <p className="text-5xl md:text-6xl font-bold text-white mb-2">
+                  $149<span className="text-3xl">.99</span>
+                </p>
+                <p className="text-2xl text-red-400 font-bold mb-2">
+                  40% OFF Custom Website!
+                </p>
+                <p className="text-lg text-gray-400">
+                  Professional One-Page Website • Mobile Optimized • SEO Ready
+                </p>
+              </div>
+
+              {/* Urgency */}
+              <div className="bg-red-500/20 border-2 border-red-500 rounded-lg p-4 mb-6 animate-pulse">
+                <p className="text-red-400 font-bold text-lg">
+                  ⏰ Limited Time: Ends January 31st, 2026
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/mlk-sale"
+                  onClick={() => setShowPromo(false)}
+                  className="gold-bg text-black px-8 py-4 font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform shadow-lg"
+                >
+                  🎯 View Full Details
+                </Link>
+                <button
+                  onClick={() => setShowPromo(false)}
+                  className="border-2 border-gray-600 text-gray-400 px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-white/5 transition-all"
+                >
+                  Maybe Later
+                </button>
+              </div>
+
+              {/* Footer */}
+              <p className="mt-6 text-xs text-gray-600 italic">
+                Honoring Dr. King's Legacy of Empowerment
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="ambient-glow -top-20 -left-20"></div>
 
       {/* Hero Section */}
