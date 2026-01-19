@@ -105,12 +105,14 @@ const MLKPromo: React.FC = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <Link
-                        to="/contact"
+                    <a
+                        href="https://www.paypal.com/ncp/payment/2NBPP3H6K6VGQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="gold-bg text-black px-12 py-5 font-bold uppercase tracking-widest text-lg hover:scale-105 transition-transform text-center min-w-[280px] shadow-lg shadow-[#D4AF37]/20"
                     >
                         👉🏾 Get Started Now
-                    </Link>
+                    </a>
                     <Link
                         to="/contact"
                         className="border-2 border-[#D4AF37] text-[#D4AF37] px-12 py-5 font-bold uppercase tracking-widest text-lg hover:bg-[#D4AF37]/10 transition-all text-center min-w-[280px]"

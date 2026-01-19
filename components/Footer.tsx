@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.jpg';
 
 const Footer: React.FC = () => {
   return (
@@ -9,10 +10,10 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="https://i.ibb.co/6RTPXN1/image.png" 
-                alt="Supremus Logo" 
-                className="h-8 w-8 brightness-110 grayscale group-hover:grayscale-0 transition-all"
+              <img
+                src={logo}
+                alt="Supremus Logo"
+                className="h-8 w-8 brightness-110 object-contain"
               />
               <span className="text-lg font-heading gold-gradient tracking-wider">Supremus, LLC</span>
             </div>
@@ -20,7 +21,7 @@ const Footer: React.FC = () => {
               Navigating the complex world of business formation, digital evolution, and growth strategies since inception.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-[#D4AF37]/70 font-semibold mb-6 uppercase tracking-widest text-xs">Resources</h3>
             <ul className="space-y-3 text-sm text-gray-500">
@@ -41,11 +42,11 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-16 pt-8 border-t border-white/5 text-center">
-            <p className="text-gray-600 text-[10px] uppercase tracking-[0.2em]">
-                &copy; {new Date().getFullYear()} Supremus, LLC. Dallas, Texas.
-            </p>
+          <p className="text-gray-600 text-[10px] uppercase tracking-[0.2em]">
+            &copy; {new Date().getFullYear()} Supremus, LLC. Dallas, Texas.
+          </p>
         </div>
       </div>
     </footer>
